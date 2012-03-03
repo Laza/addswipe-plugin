@@ -1,0 +1,40 @@
+{
+	"name": "addSwipe",
+	"version": "1.0",
+	"title": "jQuery addSwipe plugin",
+	"author": {
+		"name": "Laszlo Molnar",
+		"url": "https://github.com/Laza"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "MIT-LICENSE.txt"
+		},
+		{
+			"type": "GPLv2",
+			"url": "GPL-LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": "1.7"
+	},
+	"description": "Adds a swipe gesture listener to an element.",
+	"keywords": [
+		"swipe",
+		"gesture",
+		"touch"
+	],
+	"homepage": "https://github.com/Laza/jquery-addswipe",
+	"maintainers": [
+		{
+			"name": "Laszlo Molnar",
+			"url": "https://github.com/Laza"
+		}
+	],
+	"files": [
+		"addswipe.js",
+		"addswipe.min.js",
+		"sample.html"
+	]
+}

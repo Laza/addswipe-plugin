@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>alignTo plugin sample</title>
+<style>
+body {
+	margin:0;
+	padding:0;
+	font:12px/1.231 Arial,Helvetica,sans-serif;
+	background-color:#BCB4AE;
+	text-align:center;
+}
+#wrap {
+	position:relative;
+	margin:10px auto;
+	width:90%;
+	height:200px;
+	overflow:hidden;
+}
+#content {
+	position:absolute;
+	left:0;
+	top:0;
+	width:500%;
+	background-color:#fe9;
+}
+ul {
+	width:100%;
+	margin:0;
+	padding:0;
+	white-space:nowrap;
+	list-style-type:none;
+}
+ul li {
+	float:left;
+	display:inline-block;
+	width:20%;
+	height:200px;
+	line-height:200px;
+	font-size:5em;
+	color:#fff;
+}
+li:nth-child(1) { background-color:#69a; }
+li:nth-child(2) { background-color:#c94; }
+li:nth-child(3) { background-color:#596; }
+li:nth-child(4) { background-color:#a96; }
+li:nth-child(5) { background-color:#469; }
+</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="content">
+			<ul>
+				<li>First</li><li>Second</li><li>Third</li><li>Fourth</li><li>Fifth</li>
+			</ul>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<h3>Swipe me!</h3>
+	<button>Reset</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1"></script>
+<script src="addswipe.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#content').addSwipe(function() {
+			$('h3').text("Swiped left!");
+		}, function() {
+			$('h3').text("Swiped right!");
+		}, {
+			snapGrid: 1,
+		});
+		$('button').click(function() {
+			$('#content').trigger('resetswipe');
+		});
+	});
+</script>
+</body>
+</html>
